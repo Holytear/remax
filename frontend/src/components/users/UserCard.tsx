@@ -20,8 +20,8 @@ const UserCard: React.FC<UserCardProps> = ({ user, color, onReview }) => {
       <img src={user.avatar} alt={user.first_name} className="w-20 h-20 rounded-full mb-2 border-2 border-blue-200" />
       <div className="font-semibold text-gray-800 text-lg">{user.first_name} {user.last_name}</div>
       <button
-        className="mt-2 px-4 py-2 rounded border border-blue-500 text-blue-600 hover:bg-blue-50 transition-colors duration-200 font-medium"
-        style={{ background: color || 'transparent', color: color ? '#fff' : '#2563eb', borderColor: color }}
+        className="mt-2 px-4 py-2 rounded border font-medium transition-colors duration-200"
+        style={{ background: color || 'transparent', color: color ? '#fff' : '#2563eb', borderColor: color || '#2563eb' }}
         onClick={() => onReview && onReview(user.id)}
       >
         Review

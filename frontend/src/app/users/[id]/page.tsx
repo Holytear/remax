@@ -2,6 +2,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import PageLayout from "@/components/PageLayout";
 import { fetchUserDetail, fetchColors } from "@/services/users.api";
+import { fetchUsers } from "@/services/users.api";
 
 interface User {
   id: number;
@@ -31,8 +32,14 @@ export default async function UserDetail({ params }: { params: { id: string } })
   const userData = await fetchUserDetail(params.id);
   const user = userData.data;
   const colorsData = await fetchColors();
-  // Örnek olarak ilk rengi alıyoruz, gerekirse id'ye göre eşleştirilebilir
-  const color = Array.isArray(colorsData.data) && colorsData.data.length > 0 ? colorsData.data[0].color : null;
+  const usersData = await fetchUsers(1);
+  let color = null;
+  if (user && Array.isArray(usersData.data) && Array.isArray(colorsData.data) && colorsData.data.length > 0) {
+    const idx = usersData.data.findIndex((u: any) => u.id === user.id);
+    if (idx !== -1) {
+      color = colorsData.data[idx % colorsData.data.length].color;
+    }
+  }
   if (!user) return notFound();
 
   return (

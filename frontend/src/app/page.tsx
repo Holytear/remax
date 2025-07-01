@@ -120,17 +120,17 @@ export default function Home() {
     <PageLayout>
       <div className="min-h-screen flex flex-col items-center bg-gray-50 p-4 sm:p-8">
         <div className="w-full max-w-5xl mx-auto">
-          <header className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
+          <header className="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4 w-full">
             <h1 className="text-2xl font-bold text-gray-900 w-full text-left">All Members</h1>
-            <div className="flex flex-row items-center gap-4 w-full sm:w-auto justify-end">
-              <Button variant="primary" onClick={() => setShowCreateModal(true)}>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto justify-end">
+              <Button variant="primary" onClick={() => setShowCreateModal(true)} className="w-full sm:w-auto min-w-[150px] whitespace-nowrap text-base">
                 Create New Member
               </Button>
-              <Button variant="green" onClick={() => setShowLoginModal(true)}>
+              <Button variant="green" onClick={() => setShowLoginModal(true)} className="w-full sm:w-auto min-w-[150px] whitespace-nowrap text-base">
                 Login
               </Button>
-              <Link href="/products">
-                <Button variant="purple">Products</Button>
+              <Link href="/products" className="w-full sm:w-auto min-w-[150px]">
+                <Button variant="purple" className="w-full sm:w-auto min-w-[150px] whitespace-nowrap text-base">Products</Button>
               </Link>
             </div>
           </header>
