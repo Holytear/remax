@@ -133,7 +133,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## 🆘 Troubleshooting
+## Troubleshooting
 - **Docker build fails:** Ensure Docker Desktop is running and in Linux container mode.
 - **Port already in use:** Stop any other apps using ports 3000 or 8000.
 - **Database issues:** Delete `backend/products.db` to reset the local DB (data will be lost).
