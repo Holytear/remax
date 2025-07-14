@@ -1,4 +1,4 @@
-# 🧾 RE/MAX Türkiye Case Study
+#  RE/MAX Türkiye Case Study
 
 ## Overview
 A full-stack web application featuring:
@@ -11,7 +11,7 @@ A full-stack web application featuring:
 
 ---
 
-## 📦 Project Structure
+##  Project Structure
 ```
 frontend/   # Next.js app (TypeScript, Tailwind CSS)
 backend/    # FastAPI app (SQLite, SQLAlchemy)
@@ -21,7 +21,7 @@ README.md
 
 ---
 
-## 🛠 Prerequisites
+##  Prerequisites
 - [Node.js](https://nodejs.org/) (v18 or higher recommended)
 - [Python](https://www.python.org/) (v3.10 or higher recommended)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) (for Dockerized setup)
@@ -29,7 +29,7 @@ README.md
 
 ---
 
-## 🚀 Quick Start (with Docker)
+##  Quick Start (with Docker)
 
 1. **Clone this repository:**
    ```sh
@@ -46,7 +46,7 @@ README.md
 
 ---
 
-## 🛠 Manual Setup (Development Mode)
+##  Manual Setup (Development Mode)
 
 ### 1. Frontend (Next.js)
 ```sh
@@ -71,7 +71,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 - **Frontend:** No environment variables required for local/dev use.
@@ -81,7 +81,7 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## 🧩 Features
+##  Features
 - **User List:** Paginated, colored buttons, detail view
 - **Create User:** Modal form, API integration
 - **Login:** Modal form, token storage
@@ -92,14 +92,14 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## 🐳 Docker Compose Reference
+##  Docker Compose Reference
 - `frontend` (Next.js): http://localhost:3000
 - `backend` (FastAPI): http://localhost:8000
 - Data persists in `backend/products.db`
 
 ---
 
-## 📄 API Endpoints
+##  API Endpoints
 ### Users (external API)
 - `GET https://reqres.in/api/users`
 - `GET https://reqres.in/api/users/{id}`
@@ -117,13 +117,13 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 ---
 
-## 📱 Responsive Design
+##  Responsive Design
 - Mobile-first, works from 320px to 1440px+
 - Animations: hover, skeletons, transitions
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ### Frontend
 - (Add your test instructions here, e.g., `npm test` if tests are implemented)
@@ -138,8 +138,3 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 - **Port already in use:** Stop any other apps using ports 3000 or 8000.
 - **Database issues:** Delete `backend/products.db` to reset the local DB (data will be lost).
 - **CORS errors:** Ensure both frontend and backend are running on the correct ports.
-
----
-
-## 📝 License
-MIT (or specify your license) 
